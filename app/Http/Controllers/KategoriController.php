@@ -25,8 +25,17 @@ class KategoriController extends Controller
     	return redirect(route('kategori'))->with('sukses', 'Data Berhasil Ditambah!');
     }
 
+    public function proses_edit(Request $r) {
+    	$kategori = Kategori::where('id', $r->id)->first();
+    	$kategori->kategori = $r->kategori;
+    	$kategori->save();
+    	return redirect(route('kategori'))->with('sukses', 'Data Berhasil Diedit!');
+    }
+
     public function edit(Request $r, $id) {
-    	return view('admin.master.kategori.edit');
+        $data['row'] = Kategori::find($id);
+
+    	return view('admin.master.kategori.edit', $data);
     }
 
     public function hapus($id) {

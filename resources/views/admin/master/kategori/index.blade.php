@@ -61,6 +61,7 @@
                                         <tr>
                                             <td>{{$kategoris->id}}</td>
                                             <td>{{$kategoris->kategori}}</td>
+                                            <td><a href="{{route('kategori_edit', $kategoris->id)}}"><i class="fa fa-edit" aria-hidden="true" title="Edit"></i></a></td>
                                             <td><a href="{{route('kategori_hapus', $kategoris->id)}}" class="confirmation"><i class="fa fa-trash-o" aria-hidden="true" title="Hapus"></i></a></td>
                                         </tr>
                                         <script type="text/javascript">

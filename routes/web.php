@@ -62,7 +62,9 @@ Route::prefix('admin')->group(function(){
 		Route::get('/', 'KategoriController@kategori')->name('kategori');
 
 		Route::get('/tambah', 'KategoriController@tambah')->name('kategori_tambah');
+		Route::get('/edit/{id}', 'KategoriController@edit')->name('kategori_edit');
 		Route::post('/proses-tambah', 'KategoriController@proses_tambah')->name('kategori_proses_tambah');
+		Route::post('/proses-edit', 'KategoriController@proses_edit')->name('kategori_proses_edit');
 
 		Route::get('/hapus/{id}', 'KategoriController@hapus')->name('kategori_hapus');
 		Route::post('/proses-hapus', 'KategoriController@proses_hapus')->name('kategori_proses_hapus');
