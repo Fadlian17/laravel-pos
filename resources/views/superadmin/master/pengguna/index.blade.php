@@ -48,7 +48,7 @@
                         <div class="card">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <table id="example" class="display" style="min-width: 845px">
+                                    <table id="example" class="" style="min-width: 845px">
                                     <thead>
                                         <tr>
                                             <th>Nama</th>
@@ -102,6 +102,6 @@
 @section('js')
 
 <script src="/gleek/gleek/assets/plugins/datatables/js/jquery.dataTables.min.js"></script>
-<script src="/gleek/gleek/main/js/plugins-init/datatables.init.js"></script>
+<script src="/gleek/gleek/main/js/plugins-init/datatables.init.js"></script> 
 @endsection
 @endsection

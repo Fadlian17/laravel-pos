@@ -8,6 +8,8 @@ use \App\Checkout;
 use \App\Produk;
 use Auth;
 
+//akses superadmin
+
 class SuperAdminController extends Controller
 {
     public function dashboard() {

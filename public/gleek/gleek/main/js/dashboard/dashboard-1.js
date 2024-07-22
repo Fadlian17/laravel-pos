@@ -11,12 +11,12 @@ $(function() {
             datasets: [{
                     label: "Product Sold",
                     type: "line",
-                    borderColor: "#7f63f4",
+                    borderColor: "#55ad9b",
                     borderWidth: 5,
                     backgroundColor: 'rgba(127,99,244,0.1)',
                     data: [0, 29, 84, 96, 37, 70, 45, 63, 47, 99, 23, 32, 59, 87, 57, 34, 74, 39, 71, 44],
-                    pointBackgroundColor: "#7f63f4",
-                    pointHoverBackgroundColor: "#7f63f4",
+                    pointBackgroundColor: "#55ad9b",
+                    pointHoverBackgroundColor: "#55ad9b",
                     pointRadius: 0,
                     pointHoverRadius: 3,
                     fill: true
@@ -25,14 +25,14 @@ $(function() {
                     label: "Total Customer",
                     type: "bar",
                     backgroundColor: "#f0f2f8",
-                    backgroundColorHover: "#7f63f4",
+                    backgroundColorHover: "#55ad9b",
                     data: [0, 29, 84, 96, 37, 70, 45, 63, 47, 99, 23, 32, 59, 87, 57, 34, 74, 39, 71, 44]
                 }
             ]
         },
         options: {
             barRadius: 4,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             title: {
                 display: false,
                 text: 'Population growth (millions): Europe & Africa'
@@ -43,7 +43,7 @@ $(function() {
                     usePointStyle: true,
                     fontFamily: 'Segoe UI',
                     padding: 25
-                    
+
                 },
 
 
@@ -68,7 +68,7 @@ $(function() {
             }
         }
     });
-    
+
 
     //doughut chart
     var ctx = document.getElementById("most-selling-items");
@@ -102,7 +102,7 @@ $(function() {
         options: {
             responsive: true,
             cutoutPercentage: 60,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             animation: {
                 animateRotate: true,
                 animateScale: true,
@@ -111,8 +111,8 @@ $(function() {
                 position: 'right',
                 labels: {
                     usePointStyle: true,
-                    fontFamily: "Segoe UI", 
-                    fontSize: 14, 
+                    fontFamily: "Segoe UI",
+                    fontSize: 14,
                     fontColor: '#464a53'
                 },
 
@@ -120,7 +120,7 @@ $(function() {
             },
         }
     });
-    
+
 
 
 

@@ -262,7 +262,7 @@ $(function() {
 
 
         "dataSets": [{
-            "color": "#7f63f4",
+            "color": "#55ad9b",
             "fieldMappings": [{
                 "fromField": "value",
                 "toField": "value"
@@ -316,13 +316,13 @@ $(function() {
             "oppositeAxis": true,
             "offset": 50,
             // "scrollbarHeight": 100,
-            "background": "#7f63f4",
+            "background": "#55ad9b",
             "backgroundAlpha": 0.5,
             "selectedBackgroundAlpha": 0.5,
             "selectedBackgroundColor": "#fff",
             "graphFillAlpha": 1,
             "graphLineAlpha": 0.5,
-            "selectedGraphFillColor":"#7f63f4",
+            "selectedGraphFillColor":"#55ad9b",
             "selectedGraphFillAlpha": 1,
             "selectedGraphLineAlpha": 1,
             "autoGridCount": true,

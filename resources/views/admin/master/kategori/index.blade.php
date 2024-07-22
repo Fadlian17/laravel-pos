@@ -53,6 +53,7 @@
                                         <tr>
                                             <th>ID</th>
                                             <th>Kategori</th>
+                                            <th>Foto Kategori</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -61,6 +62,7 @@
                                         <tr>
                                             <td>{{$kategoris->id}}</td>
                                             <td>{{$kategoris->kategori}}</td>
+                                            <td>{{$kategoris->foto_kategori}}</td>
                                             <td><a href="{{route('kategori_edit', $kategoris->id)}}"><i class="fa fa-edit" aria-hidden="true" title="Edit"></i></a></td>
                                             <td><a href="{{route('kategori_hapus', $kategoris->id)}}" class="confirmation"><i class="fa fa-trash-o" aria-hidden="true" title="Hapus"></i></a></td>
                                         </tr>

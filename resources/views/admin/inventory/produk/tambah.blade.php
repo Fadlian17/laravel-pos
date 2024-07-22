@@ -24,7 +24,7 @@
                     <div class="card-body">
                         <h4 class="card-title mb-4">Tambah Produk</h4>
                         <div class="basic-form">
-                            <form action="{{route('produk_proses_tambah')}}" method="POST">
+                        <form action="{{ route('produk_proses_tambah') }}" method="POST" enctype="multipart/form-data">
                             	@csrf
                                 <div class="form-group">
                                     <label class="text-label">Nama Produk*</label>
@@ -87,6 +87,10 @@
                                 <div class="form-group">
                                     <label class="text-label">Keterangan Produk*</label>
                                     <textarea name="keterangan" class="form-control" placeholder="Masukkan Keterangan Produk" required></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-label">Foto Produk*</label>
+                                    <input type="file" name="foto_produk" class="form-control" placeholder="Foto Produk">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-form mr-2">Submit</button>
                                 <a href="{{route('produk')}}" class="btn btn-light text-dark btn-form">Cancel</a>

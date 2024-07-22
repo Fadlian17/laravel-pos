@@ -36,11 +36,11 @@
                                 <div class="form-group">
                                     <label class="text-label">Nama*</label>
                                     <input type="hidden" name="id" value="{{$pengguna->id}}">
-                                    <input type="text" name="name" class="form-control" placeholder="Firman Kurniawan" required value="{{$pengguna->name}}">
+                                    <input type="text" name="name" class="form-control" placeholder="Fadlian Alfansyah" required value="{{$pengguna->name}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Email*</label>
-                                    <input type="email" name="email" class="form-control" placeholder="kurniawan.firman94@gmail.com" required value="{{$pengguna->email}}">
+                                    <input type="email" name="email" class="form-control" placeholder="12200141@nusamandiri.ac.id" required value="{{$pengguna->email}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Password*</label>

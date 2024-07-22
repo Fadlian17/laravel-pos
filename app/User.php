@@ -7,6 +7,9 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
+/**
+ *
+ */
 {
     use Notifiable;
 
@@ -52,6 +55,12 @@ class User extends Authenticatable
     public function kasir()
     {
         if($this->role == 0) return true;
+        return false;
+    }
+
+    public function pelanggan()
+    {
+        if($this->role == 3) return true;
         return false;
     }
 }

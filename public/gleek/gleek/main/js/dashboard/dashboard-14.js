@@ -9,18 +9,18 @@
         fill: { color: '#43E794' },
         reverse: false
     });
-    
-    
+
+
     $("#daily-sales").sparkline([80, 85, 76, 77, 78, 81], {
         type: "bar",
         height: "78",
         barWidth: "3",
         resize: !0,
         barSpacing: "18",
-        barColor: "#7F63F4"
+        barColor: "#55ad9b"
     });
 
-    
+
     let draw = Chart.controllers.line.prototype.draw;
     Chart.controllers.line = Chart.controllers.line.extend({
         draw: function() {
@@ -44,10 +44,10 @@
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["2015", "2016", "2017", "2018", "2019"], 
+            labels: ["2015", "2016", "2017", "2018", "2019"],
             datasets: [{
                 data: [1000, 2260, 2135, 2525, 3732],
-                backgroundColor: "rgba(113, 216, 117, .3)", 
+                backgroundColor: "rgba(113, 216, 117, .3)",
                 borderWidth: 3,
                 borderColor: "#75D879",
                 pointBackgroundColor: "#fff",
@@ -59,7 +59,7 @@
                 fill: true
             }, {
                 data: [1000, 1830, 1735, 2135, 3232],
-                backgroundColor: "rgba(34, 144, 255, .3)", 
+                backgroundColor: "rgba(34, 144, 255, .3)",
                 borderWidth: 3,
                 borderColor: "#2290FF",
                 pointBackgroundColor: "#fff",
@@ -73,7 +73,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -104,13 +104,13 @@
         }
     });
 
-    
+
     var ctx = document.getElementById("sold-product");
     // ctx.height = 110;
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [1, 14, 5, 8, 1, 14, 2],
                 borderWidth: 3,
@@ -126,7 +126,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -212,7 +212,7 @@
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [50, 31, 49, 75, 84, 90, 43],
                 borderWidth: 3,
@@ -239,7 +239,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: false
             },
@@ -247,7 +247,7 @@
                 xAxes: [{
                     display: true,
                     gridLines: {
-                        display: false, 
+                        display: false,
                         drawBorder: false
                     }
                 }],
@@ -295,37 +295,37 @@
 
 
     var i = new Datamap( {
-        scope: "world", 
-        element: document.getElementById("company-locations"), 
-        responsive: !0, 
+        scope: "world",
+        element: document.getElementById("company-locations"),
+        responsive: !0,
         geographyConfig: {
-            popupOnHover: !1, 
-            highlightOnHover: !1, 
-            borderColor: "transparent", 
-            borderWidth: 1, 
-            highlightBorderWidth: 3, 
-            highlightFillColor: "rgba(0,123,255,0.5)", 
-            highlightBorderColor: "transparent", 
+            popupOnHover: !1,
+            highlightOnHover: !1,
+            borderColor: "transparent",
+            borderWidth: 1,
+            highlightBorderWidth: 3,
+            highlightFillColor: "rgba(0,123,255,0.5)",
+            highlightBorderColor: "transparent",
             borderWidth: 1
-        }, 
+        },
         bubblesConfig: {
             popupTemplate: function (e, i) {
                 return '<div class="datamap-sales-hover-tooltip">' + i.country + '<span class="m-l-5"></span>' + i.sold + "</div>"
-            }, 
-            borderWidth: 1, 
-            highlightBorderWidth: 3, 
-            highlightFillColor: "rgba(0,123,255,0.5)", 
-            highlightBorderColor: "transparent", 
+            },
+            borderWidth: 1,
+            highlightBorderWidth: 3,
+            highlightFillColor: "rgba(0,123,255,0.5)",
+            highlightBorderColor: "transparent",
             fillOpacity: .75
-        }, 
+        },
         fills: {
-            Visited: "#00A2FF", 
-            neato: "#673AB7", 
-            white: "#FF9800", 
+            Visited: "#00A2FF",
+            neato: "#673AB7",
+            white: "#FF9800",
             defaultFill: "#E7E8E9"
         }
     });
-    
+
     i.bubbles([{
         centered: "USA", fillKey: "white", radius: 5, sold: "$500", country: "United States"
     }, {

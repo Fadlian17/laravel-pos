@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => 'auth'], function(){
 
-Route::group(['middleware' => 'superadmin'], function(){
+Route::group(['middleware' => 'superadmin'], function(){ 
 Route::prefix('superadmin')->group(function(){
 	Route::get('/', 'SuperAdminController@dashboard')->name('superadmin');
 
@@ -120,7 +120,10 @@ Route::prefix('admin')->group(function(){
 		Route::get('/', 'ProdukController@produk')->name('produk');
 
 		Route::get('/tambah', 'ProdukController@tambah')->name('produk_tambah');
-		Route::post('/proses-tambah', 'ProdukController@proses_tambah')->name('produk_proses_tambah');
+        Route::get('/edit/{id}', 'ProdukController@edit')->name('produk_edit');
+
+        Route::post('/proses-tambah', 'ProdukController@proses_tambah')->name('produk_proses_tambah');
+		Route::post('/proses-edit', 'ProdukController@proses_edit')->name('produk_proses_edit');
 
 		Route::get('/hapus/{id}', 'ProdukController@hapus')->name('produk_hapus');
 
@@ -149,10 +152,16 @@ Route::prefix('kasir')->group(function(){
 
 	Route::prefix('transaksi')->group(function(){
 		Route::get('/', 'KasirController@transaksi')->name('transaksi');
+		Route::get('/prosestransaksi', 'KasirController@prosestransaksi')->name('prosestransaksi');
 		Route::post('/proses-transaksi', 'KasirController@proses_transaksi')->name('transaksi_proses_transaksi');
+		Route::get('/aturjadwalkirim', 'KasirController@aturjadwalkirim')->name('aturjadwalkirim');
+		Route::post('/aturtanggal', 'KasirController@aturtanggal')->name('aturtanggal');
 
 		Route::get('/proses_hapus/{id}', 'KasirController@proses_hapus')->name('transaksi_hapus');
 		Route::get('/proses_hapusall/{id}', 'KasirController@proses_hapus_all')->name('transaksi_hapus_all');
+		Route::get('/cancel_order/{kode_unik}', 'KasirController@cancel_order')->name('cancel_order');
+		Route::get('/confirmation/{kode_unik}', 'KasirController@confirmation')->name('confirmation');
+		Route::get('/delivery-confirmation/{kode_unik}', 'KasirController@delivery_confirmation')->name('delivery-confirmation');
 
 		Route::get('/checkout', 'KasirController@checkout')->name('transaksi_checkout');
 		Route::post('/proses_checkout', 'KasirController@proses_checkout')->name('transaksi_proses_checkout');
@@ -174,7 +183,34 @@ Route::prefix('kasir')->group(function(){
 
 });
 
-Route::get('/', 'PagesController@login')->name('login');
+Route::group(['middleware' => 'cart'], function(){
+	Route::get('/pelanggan/login', 'PagesController@userLogin')->name('userLogin');
+	Route::post('/pelanggan/process_login', 'PagesController@proses_userLogin')->name('proses_userLogin');
+	Route::get('/pelanggan/register', 'PagesController@userRegister')->name('userRegister');
+	Route::post('/pelanggan/process_register', 'PagesController@proses_userRegister')->name('proses_userRegister');
+	Route::get('/pelanggan/logout', 'PagesController@userLogout')->name('userLogout');
+
+	Route::get('/', 'HomeController@index')->name('home');
+	Route::get('/allproduk', 'UserProdukController@allproduk')->name('allproduk');
+	Route::get('/detailproduk/{id}', 'UserProdukController@detailproduk')->name('detailproduk');
+
+	Route::get('/riwayatpemesanan', 'UserRiwayatController@riwayatpemesanan')->middleware('user')->name('riwayatpemesanan');	
+	Route::get('/userprofile', 'UserProfileController@userprofile')->middleware('user')->name('userprofile');	
+
+	Route::get('/keranjang', 'UserKeranjangController@keranjang')->name('keranjang');	
+	Route::get('/keranjang/hapus/{keranjangId}', 'UserKeranjangController@keranjangHapus')->name('keranjangHapus');
+	Route::post('/keranjangStore', 'UserKeranjangController@keranjangStore')->name('keranjangStore');
+	Route::post('/keranjang/ubah/{keranjangId}', 'UserKeranjangController@keranjangUbah')->name('keranjangUbah');
+	Route::get('/checkout', 'UserKeranjangController@checkout')->middleware('user')->name('checkout');
+	Route::get('/confirm', 'UserKeranjangController@confirm')->name('confirm');
+	Route::post('/submitAlamat', 'UserKeranjangController@submitAlamat')->name('submitAlamat');
+	Route::post('/payment', 'UserKeranjangController@payment')->name('payment');
+	Route::get('/payment-success', 'UserKeranjangController@success')->name('payment-success');
+});
+
+Route::get('/login', 'PagesController@login')->name('login');
 Route::post('/proses_login', 'PagesController@proses_login')->name('proses_login');
 
 Route::get('/logout', 'PagesController@logout')->name('logout');
+
+

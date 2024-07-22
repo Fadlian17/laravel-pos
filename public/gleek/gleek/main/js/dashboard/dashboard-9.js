@@ -1,7 +1,7 @@
 
 $(function () {
     "use strict";
-    
+
     let draw = Chart.controllers.line.prototype.draw;
     Chart.controllers.line = Chart.controllers.line.extend({
         draw: function() {
@@ -29,15 +29,15 @@ $(function () {
             datasets: [{
                 data: [100, 3470, 1250, 7120, 1300, 9250, 8400],
                 borderWidth: 3,
-                borderColor: "#7F63F4",
-                pointColor: "#7F63F4",
-                pointBorderColor: "#7F63F4",
-                pointBackgroundColor: "#7F63F4",
+                borderColor: "#55ad9b",
+                pointColor: "#55ad9b",
+                pointBorderColor: "#55ad9b",
+                pointBackgroundColor: "#55ad9b",
                 pointBorderColor: "transparent",
                 pointBorderWidth: 2,
                 pointRadius: 3,
-                pointHoverBackgroundColor: "#7F63F4",
-                pointHoverBorderColor: "#7F63F4",
+                pointHoverBackgroundColor: "#55ad9b",
+                pointHoverBorderColor: "#55ad9b",
                 pointHoverRadius: 5,
                 pointStyle: 'circle',
                 fill: false
@@ -45,7 +45,7 @@ $(function () {
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -75,7 +75,7 @@ $(function () {
         },
     });
 
-    
+
     var ctx = document.getElementById("impression-chart");
     // ctx.height = 100;
     new Chart(ctx, {
@@ -97,7 +97,7 @@ $(function () {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -150,7 +150,7 @@ $(function () {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -202,7 +202,7 @@ $(function () {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -253,7 +253,7 @@ $(function () {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },

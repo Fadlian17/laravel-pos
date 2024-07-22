@@ -29,11 +29,11 @@ $(function() {
             datasets: [{
                     label: "Product Sold",
                     type: "line",
-                    borderColor: "#7f63f4",
+                    borderColor: "#55ad9b",
                     backgroundColor: 'transparent',
                     data: [168, 129, 84, 196, 137, 70, 45, 163, 47, 99, 23, 32, 59, 87, 57],
-                    pointBackgroundColor: "#7f63f4",
-                    pointHoverBackgroundColor: "#7f63f4",
+                    pointBackgroundColor: "#55ad9b",
+                    pointHoverBackgroundColor: "#55ad9b",
                     pointRadius: 0,
                     pointHoverRadius: 3,
                     fill: true
@@ -42,14 +42,14 @@ $(function() {
                     label: "Total Customer",
                     type: "bar",
                     backgroundColor: "#f0f2f8",
-                    backgroundColorHover: "#7f63f4",
+                    backgroundColorHover: "#55ad9b",
                     data: [168, 129, 84, 196, 137, 70, 45, 163, 47, 99, 23, 32, 59, 87, 57]
                 }
             ]
         },
         options: {
-            responsive: true, 
-            maintainAspectRatio: false, 
+            responsive: true,
+            maintainAspectRatio: false,
             barRadius: 4,
             title: {
                 display: false,
@@ -66,25 +66,25 @@ $(function() {
                 yAxes: [{
                     display: true,
                     ticks: {
-                        beginAtZero: true, 
+                        beginAtZero: true,
                         padding: 10,
                         stepSize: 50,
                         max: 200,
                         min: 0
-                    }, 
+                    },
                     gridLines: {
-                        display: true, 
-                        zeroLineColor: "transparent", 
+                        display: true,
+                        zeroLineColor: "transparent",
                         drawBorder: false
                     }
                 }],
                 xAxes: [{
                     // Change here
-                    display: true, 
-                    barPercentage: 0.1, 
+                    display: true,
+                    barPercentage: 0.1,
                     gridLines: {
-                        display: false, 
-                        zeroLineColor: "transparent", 
+                        display: false,
+                        zeroLineColor: "transparent",
                         drawBorder: false
                     }
                 }]
@@ -119,7 +119,7 @@ $(function() {
             datasets: [{
                 data: [100, 70, 150, 120, 300, 250, 400, 300],
                 borderWidth: 3,
-                borderColor: "#7F63F4",
+                borderColor: "#55ad9b",
                 pointBackgroundColor: "#FFF",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
@@ -131,7 +131,7 @@ $(function() {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -182,7 +182,7 @@ $(function() {
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },

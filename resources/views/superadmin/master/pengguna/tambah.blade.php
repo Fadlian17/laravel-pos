@@ -28,11 +28,11 @@
                                 @csrf
                                 <div class="form-group">
                                     <label class="text-label">Nama*</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Firman Kurniawan" required>
+                                    <input type="text" name="name" class="form-control" placeholder="Fadlian Alfansyah" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Email*</label>
-                                    <input type="email" name="email" class="form-control" placeholder="kurniawan.firman94@gmail.com" required>
+                                    <input type="email" name="email" class="form-control" placeholder="12200141@nusamandiri.ac.id" required>
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Password*</label>

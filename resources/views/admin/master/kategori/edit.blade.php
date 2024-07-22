@@ -31,12 +31,16 @@
                     <div class="card-body">
                         <h4 class="card-title mb-4">Edit Kategori</h4>
                         <div class="basic-form">
-                            <form action="{{route('kategori_proses_edit')}}" method="POST">
+                            <form action="{{route('kategori_proses_edit')}}" method="POST"  enctype="multipart/form-data">>
                             	@csrf
                                 <div class="form-group">
                                     <label class="text-label">Kategori*</label>
                                     <input type="text" name="kategori" class="form-control" placeholder="Masukkan Kategori Produk" value="{{ $row['kategori'] }}" required>
                                     <input type="hidden" name="id" value="{{ $row['id'] }}">
+                                </div>
+                                <div class="form-group">
+                                    <label class="text-label">Foto Kategori*</label>
+                                    <input type="file" name="foto_kategori" class="form-control" value="{{ $row['foto_kategoris'] }}">
                                 </div>
                                 <button type="submit" class="btn btn-primary btn-form mr-2">Submit</button>
                                 <a href="{{route('kategori')}}" class="btn btn-light text-dark btn-form">Cancel</a>

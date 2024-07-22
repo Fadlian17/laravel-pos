@@ -35,11 +35,11 @@
                                 @csrf
                                 <div class="form-group">
                                     <label class="text-label">Nama*</label>
-                                    <input type="text" name="name" class="form-control" placeholder="Firman Kurniawan" required value="{{$profile->name}}">
+                                    <input type="text" name="name" class="form-control" placeholder="Fadli" required value="{{$profile->name}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Email*</label>
-                                    <input type="email" name="email" class="form-control" placeholder="kurniawan.firman94@gmail.com" required value="{{$profile->email}}">
+                                    <input type="email" name="email" class="form-control" placeholder="12200141@nusamandiri.ac.id" required value="{{$profile->email}}">
                                 </div>
                                 <div class="form-group">
                                     <label class="text-label">Password Baru*</label>

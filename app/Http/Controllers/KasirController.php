@@ -42,7 +42,55 @@ class KasirController extends Controller
     	$produk = Produk::all();
     	$cart = Cart::where('user_id', Auth::user()->id)->where('status','0')->get();
         $cart2 = Cart::where('user_id', Auth::user()->id)->where('status','0')->first();
+        // dd($cart2);
     	return view('kasir.transaksi.index', compact('produk', 'cart', 'cart2'));
+    }
+
+    public function prosestransaksi(Request $request){
+        $transaksi = Checkout::orderBy('id', 'DESC')
+                            ->join('users', 'checkouts.user_id', '=', 'users.id')
+                            ->select('checkouts.*', 'users.name as nama_user', 'users.phone as phone')
+                            ->whereIn('checkouts.status', ['MENUNGGU PEMBAYARAN', 'PEMBAYARAN SUDAH DILAKUKAN', 'PEMBAYARAN TELAH DIKONFIRMASI'])
+                            ->get();
+        if ($request->ajax()) {  
+            $detail = Cart::orderBy('id', 'DESC')
+                            ->where('carts.kode_unik', $request->query('detailId'))
+                            ->join('checkouts', 'carts.kode_unik', '=', 'checkouts.kode_unik')
+                            ->join('produks', 'carts.produk_id', '=', 'produks.id')
+                            ->select('checkouts.*', 'carts.produk_id as produk_id', 'carts.jumlah as jumlah_cart', 'carts.sub_total as sub_total_cart', 'produks.nama as nama_produk')
+                            ->get();
+            return response()->json($detail);
+        }
+        // dd($transaksi);
+    	return view('kasir.transaksi.index_dev', compact('transaksi'));
+    }
+
+    public function aturjadwalkirim(Request $request){
+        $transaksi = Checkout::orderBy('id', 'DESC')
+                            ->join('users', 'checkouts.user_id', '=', 'users.id')
+                            ->select('checkouts.*', 'users.name as nama_user')
+                            ->whereNotIn('checkouts.status', ['MENUNGGU PEMBAYARAN', 'PEMBAYARAN SUDAH DILAKUKAN'])
+                            ->get();
+        if ($request->ajax()) {  
+            $detail = Cart::orderBy('id', 'DESC')
+                            ->where('carts.kode_unik', $request->query('detailId'))
+                            ->join('checkouts', 'carts.kode_unik', '=', 'checkouts.kode_unik')
+                            ->join('produks', 'carts.produk_id', '=', 'produks.id')
+                            ->select('checkouts.*', 'carts.produk_id as produk_id', 'carts.jumlah as jumlah_cart', 'carts.sub_total as sub_total_cart', 'produks.nama as nama_produk')
+                            ->get();
+            return response()->json($detail);
+        }
+        // dd($detail);
+    	return view('kasir.transaksi.aturjadwalkirim', compact('transaksi'));
+    }
+
+    public function aturtanggal(Request $request){
+        // dd($request->jadwal);
+        $checkout = Checkout::where('id', $request->transaksiId)->first();
+        $checkout->tgl_pengiriman = $request->jadwal;
+        $checkout->status = 'BARANG DALAM PROSES PENGIRIMAN';
+        $checkout->save();
+    	return back()->with('sukses', 'Tanggal Telah Dipudate');
     }
 
     public function proses_transaksi(Request $r) {
@@ -89,6 +137,36 @@ class KasirController extends Controller
         $produk->save();
         $transaksi->delete();
         return redirect()->back()->with('sukses', 'Barang Berhasil Dihapus!');
+    }
+
+    public function cancel_order($kode_unik) {
+        $checkout = Checkout::where('kode_unik', $kode_unik);
+        $carts = Cart::where('kode_unik', $kode_unik)->get();
+        foreach ($carts as $cart) {
+            $produk = Produk::where('id', $cart->produk_id)->first();
+            $produk->stok += $cart->jumlah;
+            $produk->save();
+            $cart->delete();
+        }
+        $checkout->delete();
+        return redirect()->back()->with('sukses', 'Transaksi Berhasil Dihapus');
+    }
+
+    public function confirmation($kode_unik) {
+        $checkout = Checkout::where('kode_unik', $kode_unik)->first();
+        $saldo = $checkout->total;
+        $checkout->saldo += $saldo;
+        $checkout->kembalian += $checkout->saldo - $saldo;
+        $checkout->status = 'PEMBAYARAN TELAH DIKONFIRMASI';
+        $checkout->save();
+        return redirect()->back()->with('sukses', 'Pembayaran Telah Dikonfirmasi');
+    }
+
+    public function delivery_confirmation($kode_unik) {
+        $checkout = Checkout::where('kode_unik', $kode_unik)->first();
+        $checkout->status = 'BARANG TELAH SAMPAI';
+        $checkout->save();
+        return redirect()->back()->with('sukses', 'Pengiriman Telah Dikonfirmasi');
     }
 
     public function proses_hapus_all($id) {

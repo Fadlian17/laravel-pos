@@ -12,7 +12,7 @@
                 borderWidth: 3,
                 borderColor: "#CD78F5",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#F5E4FD", 
+                backgroundColor: "#F5E4FD",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -63,7 +63,7 @@
                 borderWidth: 3,
                 borderColor: "#F26C4F",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#FCE2DC", 
+                backgroundColor: "#FCE2DC",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -114,7 +114,7 @@
                 borderWidth: 3,
                 borderColor: "#FBAF5D",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#FEEFDF", 
+                backgroundColor: "#FEEFDF",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -165,7 +165,7 @@
                 borderWidth: 3,
                 borderColor: "#CF7EF5",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#F5E4FD", 
+                backgroundColor: "#F5E4FD",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -216,7 +216,7 @@
                 borderWidth: 3,
                 borderColor: "#6DCFF6",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#E2F5FD", 
+                backgroundColor: "#E2F5FD",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -267,7 +267,7 @@
                 borderWidth: 3,
                 borderColor: "#6DCFF6",
                 pointBackgroundColor: "#FFF",
-                backgroundColor: "#E2F5FD", 
+                backgroundColor: "#E2F5FD",
                 pointBorderColor: "#e46bd7",
                 pointHoverBackgroundColor: "#FFF",
                 pointHoverBorderColor: "#e46bd7",
@@ -338,7 +338,7 @@
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             cutoutPercentage: 60,
             animation: {
                 animateRotate: true,
@@ -346,7 +346,7 @@
             },
             legend: {
                 position: 'right',
-                display: false, 
+                display: false,
                 labels: {
                     usePointStyle: true,
                     fontFamily: "CircularStdBook",
@@ -405,7 +405,7 @@
         },
         options: {
             responsive: true,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             tooltips: {
                 mode: 'index',
                 titleFontSize: 12,
@@ -456,13 +456,13 @@
     });
 
 
-    
+
     var ctx = document.getElementById("sort-chart");
     // ctx.height = 110;
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [10, 3, 13, 5, 14, 1, 10],
                 borderWidth: 3,
@@ -478,7 +478,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -509,13 +509,13 @@
         }
     });
 
-    
+
     var ctx = document.getElementById("sort-graph");
     // ctx.height = 110;
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [10, 3, 13, 5, 14, 1, 10],
                 borderWidth: 3,
@@ -531,7 +531,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -562,13 +562,13 @@
         }
     });
 
-    
+
     var ctx = document.getElementById("sort-track");
     // ctx.height = 110;
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [10, 3, 13, 5, 14, 1, 10],
                 borderWidth: 3,
@@ -584,7 +584,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -615,13 +615,13 @@
         }
     });
 
-    
+
     var ctx = document.getElementById("sort-diagrams");
     // ctx.height = 110;
     new Chart(ctx, {
         type: 'line',
         data: {
-            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"], 
+            labels: ["01 July", "02 July", "03 July", "04 July", "05 July", "06 July", "07 July"],
             datasets: [{
                 data: [10, 3, 13, 5, 14, 1, 10],
                 borderWidth: 3,
@@ -637,7 +637,7 @@
         },
         options: {
             responsive: !0,
-            maintainAspectRatio: false, 
+            maintainAspectRatio: false,
             legend: {
                 display: !1
             },
@@ -700,22 +700,22 @@
         position: "right",
         size: "5px",
         height: "550px",
-        color: "#7F63F4"
+        color: "#55ad9b"
     });
 
     $('.track-list').slimscroll({
         position: "right",
         size: "5px",
         height: "268px",
-        color: "#7F63F4"
+        color: "#55ad9b"
     });
-    
+
 
     $('.artist-list-card').slimscroll({
         position: "right",
         size: "5px",
         height: "645px",
-        color: "#7F63F4"
+        color: "#55ad9b"
     });
 
 

@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>POS LSP</title>
+    <title>POPI POKOK PINTAR</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="/gleek/gleek/assets/images/favicon.png">
     <link href="/gleek/gleek/main/css/style.css" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <!--*******************
         Preloader start
     ********************-->
@@ -28,7 +28,7 @@
         Preloader end
     ********************-->
 
-    
+
     <!--**********************************
         Main wrapper start
     ***********************************-->
@@ -52,7 +52,7 @@
         <!--**********************************
             Header start
         ***********************************-->
-        <div class="header">    
+        <div class="header">
             <div class="header-content">
                 <div class="header-left">
                     <ul>
@@ -93,7 +93,7 @@
                                                 <span class="mr-3 avatar-icon bg-success-lighten-2"><i class="fa fa-check"></i></span>
                                                 <div class="notification-content">
                                                     <div class="notification-heading">{{$users->name}}</div>
-                                                    <span class="notification-text">{{$pengumumans->pengumuman}}</span> 
+                                                    <span class="notification-text">{{$pengumumans->pengumuman}}</span>
                                                     <small class="notification-timestamp">{{$pengumumans->created_at}}</small>
                                                 </div>
                                             </a>
@@ -136,7 +136,7 @@
         <!--**********************************
             Sidebar start
         ***********************************-->
-        <div class="nk-sidebar">           
+        <div class="nk-sidebar">
             <div class="nk-nav-scroll">
                 <ul class="metismenu" id="menu">
                     <li class="nav-label">Dashboard</li>
@@ -178,21 +178,21 @@
         <!--**********************************
             Content body end
         ***********************************-->
-        
-        
+
+
         <!--**********************************
             Footer start
         ***********************************-->
         <div class="footer">
             <div class="copyright">
-                <p>Copyright &copy; Designed by <a href="https://mediabebas.com">Digitalheaps</a>, Developed by <a href="https://mediabebas.com">Firman Kurniawan</a> 2019</p>
+                <p>Copyright &copy; Designed by <a href="https://mediabebas.com">Digitalheaps</a>, Developed by <a href="https://mediabebas.com">Fadlian Alfansyah</a> 2019</p>
             </div>
         </div>
         <!--**********************************
             Footer end
         ***********************************-->
 
-        
+
         <!--**********************************
             Right sidebar start
         ***********************************-->
@@ -504,7 +504,7 @@
                                     <div class="progress-bar bg-dpink" style="width: 70%; height:6px;" role="progressbar"><span class="sr-only">60% Complete</span>
                                     </div>
                                 </div>
-                            </div>  
+                            </div>
                             <div class="progress-wrapper">
                                 <h6 class="mb-3">Down Aerobics</h6>
                                 <div class="progress mb-5">
