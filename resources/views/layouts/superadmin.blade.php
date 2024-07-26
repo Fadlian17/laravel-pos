@@ -164,6 +164,16 @@
                             </li>
                         </ul>
                     </li>
+                    <li class="mega-menu mega-menu-md"><a class="has-arrow" href="javascript:void()" aria-expanded="false"><i class="mdi mdi-television-guide"></i><span class="nav-text">Laporan </span> </a>
+                        <ul aria-expanded="false">
+                            <li><a href="{{route('laporan_produk_superadmin')}}" target="_blank">Produk</a>
+                            </li>
+                            <li><a href="{{route('laporan_transaksi_superadmin')}}" target="_blank">Transaksi</a>
+                            </li>
+                            <li><a href="{{route('laporan_produk_kosong_superadmin')}}" target="_blank">Produk Kosong</a>
+                            </li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>

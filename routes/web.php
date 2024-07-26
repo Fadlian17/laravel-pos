@@ -51,6 +51,12 @@ Route::prefix('superadmin')->group(function(){
 
 		Route::get('/hapus/{id}', 'PengumumanController@hapus')->name('pengumuman_hapus');
 	});
+
+	Route::prefix('laporan')->group(function(){
+		Route::get('/produk', 'ProdukController@laporan_produk')->name('laporan_produk_superadmin');
+		Route::get('/produk_kosong', 'ProdukController@laporan_produk_kosong')->name('laporan_produk_kosong_superadmin');
+		Route::get('/transaksi', 'ProdukController@laporan_transaksi')->name('laporan_transaksi_superadmin');
+	});
 });
 });
 
