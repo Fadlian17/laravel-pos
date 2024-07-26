@@ -162,13 +162,13 @@
 		</div>
 	</div>
 	<div class="buy-now-btn mt-24">
-		<a href="/confirm" id="button-transfer" class="checkout-1">Buy Now</a>
+		<a href="/confirm" id="button-transfer" class="checkout-1">Add To Cart</a>
 		<form action="/payment" method="post" id="form-cod">
 			@csrf
 			<input type="hidden" value="{{$kode_unik['kode_unik']}}" name="kode_unik" />
 			<input type="hidden" value="{{$alamat}}" class='inputarea' name="alamat" />
 			<input type="hidden" value="COD" name="metode" />
-			<input type="submit" class="btn btn-info1" value="Buy Now" >
+			<input type="submit" class="btn btn-info1" value="Add To Cart" >
 		</form>
 	</div>
 </section>

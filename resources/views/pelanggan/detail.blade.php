@@ -79,8 +79,8 @@
                     </a>
                 </div>
                 <div class="product-page2-buy-btn">
-                    {{-- <a href="shopping-cart.html">Buy Now</a> --}}
-                    <input type="submit" class="btn btn-primary"  value="Buy Now"/>
+                    {{-- <a href="shopping-cart.html">Add To Cart</a> --}}
+                    <input type="submit" class="btn btn-primary"  value="Add To Cart"/>
                 </div>
             </div>
         </div>

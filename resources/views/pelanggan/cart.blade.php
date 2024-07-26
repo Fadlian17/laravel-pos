@@ -13,7 +13,7 @@
                     <div class="checkout-quantity-sec">
                         <p class="chek-txt1">{{$item['attributes']['kategori']}}</p>
                         <h4 class="chek-txt2 mt-16">{{$item['name']}}</h4>
-                        <h5 class="chek-txt3 mt-8">Qty: {{$item['quantity']}}</h5>
+                        <h5 class="chek-txt3 mt-8">Qty: {{$item['quantity']}} x Rp. {{$item['price'] / $item['quantity']}}</h5>
                     </div>
                     <div class="checkoutpage-increment-full">
                         <div class="checkoutpage-increment-full-details">

@@ -107,11 +107,15 @@ class UserKeranjangController extends Controller
 
     public function keranjangHapus($productId){
         if(!empty(Auth::user())){
-            $produk = Produk::where('id', $transaksi->produk_id)->first();
-            $cart = Cart::where('kode_unik', $productId)->where('status', '0');
-            $produk->stok += $cart->jumlah;
-            $produk->save();
-            $cart->delete();
+            $cart = Cart::where('kode_unik', $productId)->where('status', '0')->first();
+            if ($cart) {
+                $produk = Produk::where('id', $cart->produk_id)->first();
+                if ($produk) {
+                    $produk->stok += $cart->jumlah;
+                    $produk->save();
+                }
+                $cart->delete();
+            }
         }else{
             \Cart::remove($productId);
         }

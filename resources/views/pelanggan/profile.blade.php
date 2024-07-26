@@ -49,6 +49,7 @@
                     <h5 class="prile3-txt3">43 Bourkle Street, Newbridge, NY 36211</h5>
                 </div> -->
                 <div class="profile-boder mt-24"></div>
+                <a href="{{route('userLogout')}}" class="btn btn-primary" style="width: 100%;">Logout</a>
             </div>
         </div>
     </div>
