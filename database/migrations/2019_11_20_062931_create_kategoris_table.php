@@ -16,6 +16,7 @@ class CreateKategorisTable extends Migration
         Schema::create('kategoris', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('kategori');
+            $table->string('foto_kategori')->default('no-image.png');
             $table->timestamps();
         });
     }

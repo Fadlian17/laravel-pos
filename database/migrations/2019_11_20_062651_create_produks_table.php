@@ -27,6 +27,7 @@ class CreateProduksTable extends Migration
             $table->string('laba')->nullable();
             $table->string('ppn')->nullable();
             $table->text('keterangan');
+            $table->string('foto_produk')->nullable();
             $table->timestamps();
         });
     }
